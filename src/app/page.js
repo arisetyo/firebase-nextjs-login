@@ -34,7 +34,6 @@ export default function Home() {
     e.preventDefault();
     try {
       await googleSignIn()
-      // navigate("/home")
       router.push('/dashboard')
     } catch (error) {
       console.log(error.message)
