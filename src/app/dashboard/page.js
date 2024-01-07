@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { useAuthContext } from '../../context/UserAuthenticate'
 
 import styles from './page.module.css'
+import Image from 'next/image'
 
 
 /**
@@ -28,15 +29,29 @@ export default function Home() {
 
   const logout = async () => {
     await logOut()
-    router.push('/')
+    router.push('/?logout=success')
   }
 
   return (
     <main className={styles.main}>
-      <p>
-        Welcome <br />
-        {user && user.email}
-      </p>
+      {
+        user ? (
+          <>
+            <Image
+              src={user.photoURL}
+              width={100}
+              height={100}
+              alt='user photo'
+            />
+            <p>
+              Welcome <strong>{user.displayName}</strong>
+              <br />
+              email: {user.email}
+            </p>
+          </>
+        ) : ''
+      }
+      
       <button onClick={() => logout()}>Logout</button>
       <Link href={'/'}>Home</Link>
     </main>

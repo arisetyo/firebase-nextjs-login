@@ -39,7 +39,6 @@ export const AuthContextProvider = ({ children }) => {
   // google sign in
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
-      console.log("Auth", currentuser)
       setUser(currentuser)
     });
 

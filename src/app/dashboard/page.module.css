@@ -25,3 +25,7 @@
 .main a {
   color: burlywood;
 }
+
+.main > img {
+  border-radius: 16px;
+}

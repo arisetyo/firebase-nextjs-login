@@ -2,6 +2,7 @@
  * Layout component that queries for data
  */
 
+import Image from 'next/image'
 import { AuthContextProvider } from '../context/UserAuthenticate'
 import { Inter } from 'next/font/google'
 
@@ -22,6 +23,12 @@ export default function RootLayout({ children }) {
         ${styles.layout}
         ${inter.className}
       `}>
+        <Image
+          alt='vercel logo'
+          src={'/vercel.svg'}
+          width={50}
+          height={20}
+        />
         <h1>Firebase login test</h1>
         <AuthContextProvider>
           {children}
