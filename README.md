@@ -1,3 +1,11 @@
+# firebase-nextjs-login
+
+## About
+
+A simple web app to demonstrate how we can use [Firebase Authentication](https://firebase.google.com/docs/auth) feature in creating an authentication process in NextJS.
+
+More on the [Firebase](https://firebase.google.com/) development platform.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
